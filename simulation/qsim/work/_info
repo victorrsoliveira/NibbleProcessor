@@ -1,0 +1,136 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/victor/Documents/NIbbleProcessor/simulation/qsim
+vDecoder
+Z1 !s110 1478195571
+!i10b 1
+!s100 [ETj]JOXjdbAj1[ePY9d91
+IheKTC6JO<YX:hAVWCO5jC0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1478195568
+Z3 8NibbleProcessor.vo
+Z4 FNibbleProcessor.vo
+Z5 L0 32
+Z6 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z7 !s108 1478195571.000000
+Z8 !s107 NibbleProcessor.vo|
+Z9 !s90 -work|work|NibbleProcessor.vo|
+!i113 1
+Z10 o-work work
+n@decoder
+vDecoder_vlg_vec_tst
+R1
+!i10b 1
+!s100 <:LI>mBhj2`cBYNkMBRE22
+IVcIZeT5FWokO_UoNoJF8d2
+R2
+R0
+w1478195567
+8DecoderTest.vwf.vt
+FDecoderTest.vwf.vt
+Z11 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 DecoderTest.vwf.vt|
+!s90 -work|work|DecoderTest.vwf.vt|
+!i113 1
+R10
+n@decoder_vlg_vec_tst
+vMux3_1
+Z12 !s110 1478202520
+!i10b 1
+!s100 QHQkH^:Z>J57ROIaAlJOI1
+IiJo3L5h;Z?FNO9bLXYbn82
+R2
+R0
+w1478202519
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1478202520.000000
+R8
+R9
+!i113 1
+R10
+n@mux3_1
+vMux3_1_vlg_vec_tst
+R12
+!i10b 1
+!s100 fb6Mg^L^P?P8Q3`3ZF@>f1
+I4II@J6f_95>8DZBRB:zD53
+R2
+R0
+w1478202518
+8Mux3_1Test.vwf.vt
+FMux3_1Test.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R13
+!s107 Mux3_1Test.vwf.vt|
+!s90 -work|work|Mux3_1Test.vwf.vt|
+!i113 1
+R10
+n@mux3_1_vlg_vec_tst
+vReg8
+Z14 !s110 1478198465
+!i10b 1
+!s100 XOiWJ9]jM9hYEPFcKm6H13
+I155iknT_TdzGAQm6mYRi32
+R2
+R0
+w1478198464
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z15 !s108 1478198465.000000
+R8
+R9
+!i113 1
+R10
+n@reg8
+vReg8_vlg_vec_tst
+R14
+!i10b 1
+!s100 1Hc:kdmInoO3=7j<I[91m1
+I;Qz=7?Nh:C9V^VDfMI9il2
+R2
+R0
+w1478198463
+8Reg8Test.vwf.vt
+FReg8Test.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R15
+!s107 Reg8Test.vwf.vt|
+!s90 -work|work|Reg8Test.vwf.vt|
+!i113 1
+R10
+n@reg8_vlg_vec_tst

@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "MOUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MOUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MOUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MOUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MOUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MOUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MOUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MOUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SEL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "M3[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SEL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "M2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "M1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "M3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "M2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "M1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "M3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "M2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "M1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "M3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "M2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "M1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "M3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "M2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "M1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "M3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "M2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "M1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "M3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "M2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "M1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "M3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "M2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "M1[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
