@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Nov  3 16:46:04 2016
+Analysis & Synthesis Status : Successful - Thu Nov  3 22:50:35 2016
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : NibbleProcessor
-Top-level Entity Name : Mux3_1
+Top-level Entity Name : single_port_rom
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 34
+Total pins : 30
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

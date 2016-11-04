@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CGXFC7C7F23C8
-set_global_assignment -name TOP_LEVEL_ENTITY Mux3_1
+set_global_assignment -name TOP_LEVEL_ENTITY single_port_rom
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:28:43  NOVEMBER 03, 2016"
 set_global_assignment -name LAST_QUARTUS_VERSION 16.0.0
@@ -50,19 +50,29 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_global_assignment -name BDF_FILE Register3Bits.bdf
-set_global_assignment -name BDF_FILE Register5Bits.bdf
-set_global_assignment -name BDF_FILE Register8Bits.bdf
-set_global_assignment -name VERILOG_FILE single_port_ram.v
-set_global_assignment -name VERILOG_FILE single_port_rom.v
-set_global_assignment -name BDF_FILE Decoder.bdf
-set_global_assignment -name VECTOR_WAVEFORM_FILE DecoderTest.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Reg8Test.vwf
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name BDF_FILE Mux3_1.bdf
+set_global_assignment -name SEARCH_PATH /home/victor/Documents/QuartusProjects/NibbleProcessor/bsf_files
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE Mux3_1Test.vwf
+set_global_assignment -name BSF_FILE bsf_files/Mux3_1.bsf
+set_global_assignment -name VECTOR_WAVEFORM_FILE vwf_files/Reg8Test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE vwf_files/Reg5Test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE vwf_files/Reg3Test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE vwf_files/Mux3_1Test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE vwf_files/DecoderTest.vwf
+set_global_assignment -name BSF_FILE bsf_files/single_port_rom.bsf
+set_global_assignment -name BSF_FILE bsf_files/single_port_ram.bsf
+set_global_assignment -name BSF_FILE bsf_files/Register8Bits.bsf
+set_global_assignment -name BSF_FILE bsf_files/Register5Bits.bsf
+set_global_assignment -name BSF_FILE bsf_files/Register3Bits.bsf
+set_global_assignment -name BSF_FILE bsf_files/Decoder.bsf
+set_global_assignment -name BDF_FILE Register3Bits.bdf
+set_global_assignment -name BDF_FILE Decoder.bdf
+set_global_assignment -name BDF_FILE Mux3_1.bdf
+set_global_assignment -name BDF_FILE Register5Bits.bdf
+set_global_assignment -name BDF_FILE Register8Bits.bdf
+set_global_assignment -name VERILOG_FILE single_port_ram.v
+set_global_assignment -name VERILOG_FILE single_port_rom.v

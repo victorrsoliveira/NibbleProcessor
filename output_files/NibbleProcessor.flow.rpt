@@ -1,5 +1,5 @@
 Flow report for NibbleProcessor
-Thu Nov  3 16:48:39 2016
+Thu Nov  3 22:50:35 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Nov  3 16:48:39 2016       ;
+; Flow Status                     ; Successful - Thu Nov  3 22:50:35 2016       ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                   ; NibbleProcessor                             ;
-; Top-level Entity Name           ; Mux3_1                                      ;
+; Top-level Entity Name           ; single_port_rom                             ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 34                                          ;
+; Total pins                      ; 30                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,31 +68,32 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/03/2016 16:45:55 ;
+; Start date & time ; 11/03/2016 22:50:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; NibbleProcessor     ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                             ;
-+-------------------------------------+---------------------------------------+-----------------+-------------+----------------+
-; Assignment Name                     ; Value                                 ; Default Value   ; Entity Name ; Section Id     ;
-+-------------------------------------+---------------------------------------+-----------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.147820235505659                     ; --              ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --              ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>          ; --          ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                  ; --              ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --              ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --              ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                              ; --              ; Mux3_1      ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --              ; Mux3_1      ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --              ; Mux3_1      ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --              ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --              ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --              ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; Mux3_1                                ; NibbleProcessor ; --          ; --             ;
-+-------------------------------------+---------------------------------------+-----------------+-------------+----------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                            ;
++-------------------------------------+------------------------------------------------------------------+-----------------+-----------------+----------------+
+; Assignment Name                     ; Value                                                            ; Default Value   ; Entity Name     ; Section Id     ;
++-------------------------------------+------------------------------------------------------------------+-----------------+-----------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 0.147822422606331                                                ; --              ; --              ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                      ; --              ; --              ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                        ; <None>          ; --              ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                                             ; --              ; --              ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                               ; --              ; --              ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                ; --              ; --              ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                         ; --              ; single_port_rom ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                            ; --              ; single_port_rom ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                           ; --              ; single_port_rom ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                              ; --              ; --              ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                            ; --              ; --              ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                     ; --              ; --              ; --             ;
+; SEARCH_PATH                         ; /home/victor/Documents/QuartusProjects/NibbleProcessor/bsf_files ; --              ; --              ; --             ;
+; TOP_LEVEL_ENTITY                    ; single_port_rom                                                  ; NibbleProcessor ; --              ; --             ;
++-------------------------------------+------------------------------------------------------------------+-----------------+-----------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -100,10 +101,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 1236 MB             ; 00:00:23                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1368 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1373 MB             ; 00:00:00                           ;
-; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:23                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 1224 MB             ; 00:00:25                           ;
+; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,8 +112,6 @@ agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
 +----------------------+------------------+----------------+------------+----------------+
 ; Analysis & Synthesis ; blackbox         ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
-; EDA Netlist Writer   ; blackbox         ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
-; EDA Netlist Writer   ; blackbox         ; Ubuntu 16.04.1 ; 16         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 
@@ -122,8 +119,6 @@ agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off NibbleProcessor -c NibbleProcessor
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off NibbleProcessor -c NibbleProcessor --vector_source=/home/victor/Documents/NIbbleProcessor/Mux3_1Test.vwf --testbench_file=/home/victor/Documents/NIbbleProcessor/simulation/qsim/Mux3_1Test.vwf.vt
-quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=/home/victor/Documents/NIbbleProcessor/simulation/qsim/ NibbleProcessor -c NibbleProcessor
 
 
 
