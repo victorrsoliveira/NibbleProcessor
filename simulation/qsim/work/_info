@@ -134,13 +134,55 @@ Z19 !s90 -work|work|Reg8Test.vwf.vt|
 !i113 1
 R10
 n@reg8_vlg_vec_tst
+vRegister24Bits
+Z20 !s110 1478272446
+!i10b 1
+!s100 @_Mi_4VA6VRBEhi638E7X1
+Ilme8DDGG?Q[<:]0ijzHae0
+R2
+Z21 d/home/alexbatista/AlteraProjects/NibbleProcessor/simulation/qsim
+w1478272443
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z22 !s108 1478272446.000000
+R8
+R9
+!i113 1
+R10
+n@register24@bits
+vRegister24Bits_vlg_vec_tst
+R20
+!i10b 1
+!s100 aM<b3FIhaF@l;_kn>0D<_0
+IcVb0CinC<hkL;4_V3P@ke2
+R2
+R21
+w1478272442
+8Reg24Test.vwf.vt
+FReg24Test.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R22
+!s107 Reg24Test.vwf.vt|
+!s90 -work|work|Reg24Test.vwf.vt|
+!i113 1
+R10
+n@register24@bits_vlg_vec_tst
 vRegister3Bits
-Z20 !s110 1478219972
+Z23 !s110 1478219972
 !i10b 1
 !s100 XQI4o4RER@bV9FiC`i1fb1
 I6lQ>L>4i_6SEBaaE1B42R2
 R2
-Z21 d/home/victor/Documents/QuartusProjects/NibbleProcessor/simulation/qsim
+Z24 d/home/victor/Documents/QuartusProjects/NibbleProcessor/simulation/qsim
 w1478219971
 R3
 R4
@@ -149,19 +191,19 @@ R6
 r1
 !s85 0
 31
-Z22 !s108 1478219972.000000
+Z25 !s108 1478219972.000000
 R8
 R9
 !i113 1
 R10
 n@register3@bits
 vRegister3Bits_vlg_vec_tst
-R20
+R23
 !i10b 1
 !s100 ;<ZLR@PELUS[a7^WzYJ8e2
 IcAIPTfdjW=0H8fXjn:j^N0
 R2
-R21
+R24
 w1478219970
 8Reg3Test.vwf.vt
 FReg3Test.vwf.vt
@@ -170,19 +212,19 @@ R6
 r1
 !s85 0
 31
-R22
+R25
 !s107 Reg3Test.vwf.vt|
 !s90 -work|work|Reg3Test.vwf.vt|
 !i113 1
 R10
 n@register3@bits_vlg_vec_tst
 vRegister5Bits
-Z23 !s110 1478223399
+Z26 !s110 1478223399
 !i10b 1
 !s100 fS5[@TgziX8CFQ]hzh4k13
 IaNK^_i5zB<e[z@mDNNfBR3
 R2
-R21
+R24
 w1478223398
 R3
 R4
@@ -191,19 +233,19 @@ R6
 r1
 !s85 0
 31
-Z24 !s108 1478223399.000000
+Z27 !s108 1478223399.000000
 R8
 R9
 !i113 1
 R10
 n@register5@bits
 vRegister5Bits_vlg_vec_tst
-R23
+R26
 !i10b 1
 !s100 F`VHUOAW<VM:m`5GYf>;P2
 IiYb1LzgN[MDEQED3[@55U0
 R2
-R21
+R24
 w1478223397
 8Reg5Test.vwf.vt
 FReg5Test.vwf.vt
@@ -212,19 +254,19 @@ R6
 r1
 !s85 0
 31
-R24
+R27
 !s107 Reg5Test.vwf.vt|
 !s90 -work|work|Reg5Test.vwf.vt|
 !i113 1
 R10
 n@register5@bits_vlg_vec_tst
 vRegister8Bits
-Z25 !s110 1478218477
+Z28 !s110 1478218477
 !i10b 1
 !s100 EJaaGEz^NWWz8BlaAcjem0
 IXHYY?4=`O>zM>i4oYhH1k1
 R2
-R21
+R24
 w1478218473
 R3
 R4
@@ -240,12 +282,12 @@ R9
 R10
 n@register8@bits
 vRegister8Bits_vlg_vec_tst
-R25
+R28
 !i10b 1
 !s100 =z@>=Ke:9MYjMjU:bM?3G0
 IFhezgN^g;IM`SUb`4=M_52
 R2
-R21
+R24
 w1478218472
 R16
 R17
