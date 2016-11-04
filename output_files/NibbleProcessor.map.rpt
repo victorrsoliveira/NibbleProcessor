@@ -1,5 +1,5 @@
 Analysis & Synthesis report for NibbleProcessor
-Thu Nov  3 22:50:35 2016
+Fri Nov  4 12:11:27 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -13,12 +13,14 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Register8Bits:inst|BUSMUX:inst1
+ 10. Parameter Settings for User Entity Instance: BUSMUX:inst1
+ 11. Parameter Settings for User Entity Instance: Register8Bits:inst19|BUSMUX:inst1
+ 12. Parameter Settings for User Entity Instance: Register8Bits:inst20|BUSMUX:inst1
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -45,14 +47,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov  3 22:50:35 2016       ;
+; Analysis & Synthesis Status     ; Successful - Fri Nov  4 12:11:27 2016       ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                   ; NibbleProcessor                             ;
-; Top-level Entity Name           ; single_port_rom                             ;
+; Top-level Entity Name           ; Register24Bits                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 30                                          ;
+; Total registers                 ; 24                                          ;
+; Total pins                      ; 51                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -71,7 +73,7 @@ agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; single_port_rom    ; NibbleProcessor    ;
+; Top-level entity name                                                           ; Register24Bits     ; NibbleProcessor    ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -159,99 +161,68 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                    ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
-; single_port_rom.v                ; yes             ; User Verilog HDL File  ; /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v        ;         ;
-; single_port_rom_init.txt         ; yes             ; Auto-Found File        ; /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom_init.txt ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------+---------+
+; Register8Bits.bdf                ; yes             ; User Block Diagram/Schematic File  ; /home/alexbatista/AlteraProjects/NibbleProcessor/Register8Bits.bdf                ;         ;
+; Register24Bits.bdf               ; yes             ; User Block Diagram/Schematic File  ; /home/alexbatista/AlteraProjects/NibbleProcessor/Register24Bits.bdf               ;         ;
+; busmux.tdf                       ; yes             ; Megafunction                       ; /home/alexbatista/altera_lite/16.0/quartus/libraries/megafunctions/busmux.tdf     ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; /home/alexbatista/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.inc    ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; /home/alexbatista/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.tdf    ;         ;
+; aglobal160.inc                   ; yes             ; Megafunction                       ; /home/alexbatista/altera_lite/16.0/quartus/libraries/megafunctions/aglobal160.inc ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; /home/alexbatista/altera_lite/16.0/quartus/libraries/megafunctions/muxlut.inc     ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; /home/alexbatista/altera_lite/16.0/quartus/libraries/megafunctions/bypassff.inc   ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; /home/alexbatista/altera_lite/16.0/quartus/libraries/megafunctions/altshift.inc   ;         ;
+; db/mux_0kc.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/alexbatista/AlteraProjects/NibbleProcessor/db/mux_0kc.tdf                   ;         ;
+; db/mux_elc.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/alexbatista/AlteraProjects/NibbleProcessor/db/mux_elc.tdf                   ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 0           ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 0           ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 0           ;
-;     -- 5 input functions                    ; 0           ;
-;     -- 4 input functions                    ; 0           ;
-;     -- <=3 input functions                  ; 0           ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 30          ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; q[0]~output ;
-; Maximum fan-out                             ; 1           ;
-; Total fan-out                               ; 30          ;
-; Average fan-out                             ; 0.50        ;
-+---------------------------------------------+-------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 12        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 0         ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 0         ;
+;     -- 5 input functions                    ; 0         ;
+;     -- 4 input functions                    ; 0         ;
+;     -- <=3 input functions                  ; 0         ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 24        ;
+;                                             ;           ;
+; I/O pins                                    ; 51        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 24        ;
+; Total fan-out                               ; 171       ;
+; Average fan-out                             ; 1.36      ;
++---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-----------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name     ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-----------------+--------------+
-; |single_port_rom           ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 30   ; 0            ; |single_port_rom    ; single_port_rom ; work         ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+-----------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name    ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------+----------------+--------------+
+; |Register24Bits            ; 0 (0)             ; 24 (0)       ; 0                 ; 0          ; 51   ; 0            ; |Register24Bits                      ; Register24Bits ; work         ;
+;    |Register8Bits:inst19|  ; 0 (0)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Register24Bits|Register8Bits:inst19 ; Register8Bits  ; work         ;
+;    |Register8Bits:inst20|  ; 0 (0)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Register24Bits|Register8Bits:inst20 ; Register8Bits  ; work         ;
+;    |Register8Bits:inst|    ; 0 (0)             ; 8 (8)        ; 0                 ; 0          ; 0    ; 0            ; |Register24Bits|Register8Bits:inst   ; Register8Bits  ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; q[0]~reg0                              ; Stuck at GND due to stuck port data_in ;
-; q[1]~reg0                              ; Stuck at GND due to stuck port data_in ;
-; q[2]~reg0                              ; Stuck at GND due to stuck port data_in ;
-; q[3]~reg0                              ; Stuck at GND due to stuck port data_in ;
-; q[4]~reg0                              ; Stuck at GND due to stuck port data_in ;
-; q[5]~reg0                              ; Stuck at GND due to stuck port data_in ;
-; q[6]~reg0                              ; Stuck at GND due to stuck port data_in ;
-; q[7]~reg0                              ; Stuck at GND due to stuck port data_in ;
-; q[8]~reg0                              ; Stuck at GND due to stuck port data_in ;
-; q[9]~reg0                              ; Stuck at GND due to stuck port data_in ;
-; q[10]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; q[11]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; q[12]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; q[13]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; q[14]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; q[15]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; q[16]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; q[17]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; q[18]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; q[19]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; q[20]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; q[21]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; q[22]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; q[23]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 24 ;                                        ;
-+----------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                        ;
-+---------------+---------------------------+----------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
-+---------------+---------------------------+----------------------------------------+
-; q[1]~reg0     ; Stuck at GND              ; q[23]~reg0                             ;
-;               ; due to stuck port data_in ;                                        ;
-+---------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -259,29 +230,68 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 24    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 24    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 24    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register8Bits:inst|BUSMUX:inst1 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 8     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst1 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; WIDTH          ; 24    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register8Bits:inst19|BUSMUX:inst1 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 8     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register8Bits:inst20|BUSMUX:inst1 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 8     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 30                          ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; arriav_ff         ; 24                              ;
+;     ENA CLR       ; 24                              ;
+; boundary_port     ; 51                              ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
 
 
 +-------------------------------+
@@ -299,7 +309,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Thu Nov  3 22:50:26 2016
+    Info: Processing started: Fri Nov  4 12:11:10 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off NibbleProcessor -c NibbleProcessor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file Register3Bits.bdf
@@ -313,59 +323,42 @@ Info (12021): Found 1 design units, including 1 entities, in source file Registe
 Info (12021): Found 1 design units, including 1 entities, in source file Register8Bits.bdf
     Info (12023): Found entity 1: Register8Bits
 Info (12021): Found 1 design units, including 1 entities, in source file single_port_ram.v
-    Info (12023): Found entity 1: single_port_ram File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_ram.v Line: 4
+    Info (12023): Found entity 1: single_port_ram File: /home/alexbatista/AlteraProjects/NibbleProcessor/single_port_ram.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file single_port_rom.v
-    Info (12023): Found entity 1: single_port_rom File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 4
-Info (12127): Elaborating entity "single_port_rom" for the top level hierarchy
-Warning (10850): Verilog HDL warning at single_port_rom.v(24): number of words (1) in memory file does not match the number of elements in the address range [0:31] File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 24
-Warning (10230): Verilog HDL assignment warning at single_port_rom_init.txt(1): truncated value with size 25 to match size of target (24) File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom_init.txt Line: 1
-Warning (10030): Net "rom.data_a" at single_port_rom.v(12) has no driver or initial value, using a default initial value '0' File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 12
-Warning (10030): Net "rom.waddr_a" at single_port_rom.v(12) has no driver or initial value, using a default initial value '0' File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 12
-Warning (10030): Net "rom.we_a" at single_port_rom.v(12) has no driver or initial value, using a default initial value '0' File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 12
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "rom" is uninferred due to inappropriate RAM size File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 12
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/victor/Documents/QuartusProjects/NibbleProcessor/db/NibbleProcessor.ram0_single_port_rom_7cbe853a.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "q[0]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[1]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[2]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[3]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[4]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[5]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[6]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[7]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[8]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[9]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[10]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[11]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[12]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[13]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[14]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[15]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[16]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[17]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[18]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[19]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[20]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[21]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[22]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
-    Warning (13410): Pin "q[23]" is stuck at GND File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 27
+    Info (12023): Found entity 1: single_port_rom File: /home/alexbatista/AlteraProjects/NibbleProcessor/single_port_rom.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file Register24Bits.bdf
+    Info (12023): Found entity 1: Register24Bits
+Info (12127): Elaborating entity "Register24Bits" for the top level hierarchy
+Info (12128): Elaborating entity "Register8Bits" for hierarchy "Register8Bits:inst"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "Register8Bits:inst|BUSMUX:inst1"
+Info (12130): Elaborated megafunction instantiation "Register8Bits:inst|BUSMUX:inst1"
+Info (12133): Instantiated megafunction "Register8Bits:inst|BUSMUX:inst1" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "Register8Bits:inst|BUSMUX:inst1|lpm_mux:$00000" File: /home/alexbatista/altera_lite/16.0/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12131): Elaborated megafunction instantiation "Register8Bits:inst|BUSMUX:inst1|lpm_mux:$00000", which is child of megafunction instantiation "Register8Bits:inst|BUSMUX:inst1" File: /home/alexbatista/altera_lite/16.0/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_0kc.tdf
+    Info (12023): Found entity 1: mux_0kc File: /home/alexbatista/AlteraProjects/NibbleProcessor/db/mux_0kc.tdf Line: 23
+Info (12128): Elaborating entity "mux_0kc" for hierarchy "Register8Bits:inst|BUSMUX:inst1|lpm_mux:$00000|mux_0kc:auto_generated" File: /home/alexbatista/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst1"
+Info (12130): Elaborated megafunction instantiation "BUSMUX:inst1"
+Info (12133): Instantiated megafunction "BUSMUX:inst1" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "24"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst1|lpm_mux:$00000" File: /home/alexbatista/altera_lite/16.0/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12131): Elaborated megafunction instantiation "BUSMUX:inst1|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst1" File: /home/alexbatista/altera_lite/16.0/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_elc.tdf
+    Info (12023): Found entity 1: mux_elc File: /home/alexbatista/AlteraProjects/NibbleProcessor/db/mux_elc.tdf Line: 23
+Info (12128): Elaborating entity "mux_elc" for hierarchy "BUSMUX:inst1|lpm_mux:$00000|mux_elc:auto_generated" File: /home/alexbatista/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "addr[0]" File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 6
-    Warning (15610): No output dependent on input pin "addr[1]" File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 6
-    Warning (15610): No output dependent on input pin "addr[2]" File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 6
-    Warning (15610): No output dependent on input pin "addr[3]" File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 6
-    Warning (15610): No output dependent on input pin "addr[4]" File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 6
-    Warning (15610): No output dependent on input pin "clk" File: /home/victor/Documents/QuartusProjects/NibbleProcessor/single_port_rom.v Line: 7
-Info (21057): Implemented 30 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
+Info (21057): Implemented 75 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 27 input pins
     Info (21059): Implemented 24 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 1273 megabytes
-    Info: Processing ended: Thu Nov  3 22:50:35 2016
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:25
+    Info (21061): Implemented 24 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 1281 megabytes
+    Info: Processing ended: Fri Nov  4 12:11:27 2016
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:40
 
 
