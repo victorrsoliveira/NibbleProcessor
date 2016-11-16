@@ -1,0 +1,17 @@
+module rReg (result, clk, en, r);
+
+	input [7:0] result;
+	input clk, en;
+	output [7:0] r;
+	
+	reg[7:0] r;
+	
+	always@(posedge clk)
+	begin
+		if(en)
+		begin
+			r <= result;
+		end
+	end
+
+endmodule

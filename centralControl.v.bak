@@ -1,0 +1,5 @@
+module centralControl(input reset, clk, input [1:0] op, output reg [1:0] y);
+
+
+
+endmodule

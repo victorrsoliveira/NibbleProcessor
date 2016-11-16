@@ -1,0 +1,6 @@
+module opReg(input [2:0] inst, input clk, en, output [2:0] op);
+	
+	reg[2;0] op;
+	
+
+endmodule

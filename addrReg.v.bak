@@ -1,0 +1,3 @@
+module addrReg(addr_in,clk,en,addr_out);
+
+endmodule

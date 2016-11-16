@@ -1,0 +1,7 @@
+module fullAdder8Bits_v(cin, in1, in2,out, cout);
+
+	input [7:0] cin, in1, in2;
+	output [7:0] out,cout;
+
+	assign {cout, cout} = cin + in1 + in2;
+endmodule

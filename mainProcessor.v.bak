@@ -1,0 +1,26 @@
+module mainProcessor(input clk, reset);
+
+wire[4:0] pc_inc, pc_out;
+wire[23:0] rom_out, inst_out;
+wire[1:0] en;
+
+assign pc_inc = pc_out + 5'd1;
+
+programCounter(pc_inc, en[1], clk, reset, pc_out);
+single_port_rom(pc_out, clk, rom_out);
+instructionReg(rom_out, clk, en[1], inst_out);
+
+
+centralControl_v();
+
+single_port_ram();
+addrReg();
+opReg();
+xReg();
+yReg();
+
+
+fullAdder8Bits_v();
+complement2_v();
+
+endmodule

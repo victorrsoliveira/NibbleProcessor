@@ -1,0 +1,8 @@
+module programCounter (input inc, en, output out);
+
+always @(posedge en)
+begin
+	out = inc + out;
+end
+
+endmodule

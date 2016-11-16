@@ -1,0 +1,8 @@
+module instructionReg(q,clk,en,inst);
+
+input [23:0] q;
+input clk, en;
+output [23:0] inst;
+	
+	
+endmodule
