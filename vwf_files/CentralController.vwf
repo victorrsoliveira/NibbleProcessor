@@ -83,7 +83,7 @@ SIGNAL("reset")
 	PARENT = "";
 }
 
-SIGNAL("y")
+SIGNAL("actual_state")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -93,27 +93,27 @@ SIGNAL("y")
 	PARENT = "";
 }
 
-SIGNAL("y[1]")
+SIGNAL("actual_state[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "y";
+	PARENT = "actual_state";
 }
 
-SIGNAL("y[0]")
+SIGNAL("actual_state[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "y";
+	PARENT = "actual_state";
 }
 
-SIGNAL("stateOut")
+SIGNAL("next_state")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -123,24 +123,24 @@ SIGNAL("stateOut")
 	PARENT = "";
 }
 
-SIGNAL("stateOut[1]")
+SIGNAL("next_state[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "stateOut";
+	PARENT = "next_state";
 }
 
-SIGNAL("stateOut[0]")
+SIGNAL("next_state[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "stateOut";
+	PARENT = "next_state";
 }
 
 TRANSITION_LIST("clk")
@@ -190,12 +190,12 @@ TRANSITION_LIST("reset")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 2.5;
-		LEVEL 1 FOR 197.5;
+		LEVEL 1 FOR 5.0;
+		LEVEL 0 FOR 195.0;
 	}
 }
 
-TRANSITION_LIST("y[1]")
+TRANSITION_LIST("actual_state[1]")
 {
 	NODE
 	{
@@ -204,7 +204,7 @@ TRANSITION_LIST("y[1]")
 	}
 }
 
-TRANSITION_LIST("y[0]")
+TRANSITION_LIST("actual_state[0]")
 {
 	NODE
 	{
@@ -213,7 +213,7 @@ TRANSITION_LIST("y[0]")
 	}
 }
 
-TRANSITION_LIST("stateOut[1]")
+TRANSITION_LIST("next_state[1]")
 {
 	NODE
 	{
@@ -222,7 +222,7 @@ TRANSITION_LIST("stateOut[1]")
 	}
 }
 
-TRANSITION_LIST("stateOut[0]")
+TRANSITION_LIST("next_state[0]")
 {
 	NODE
 	{
@@ -281,7 +281,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "y";
+	CHANNEL = "actual_state";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
@@ -291,7 +291,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "y[1]";
+	CHANNEL = "actual_state[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
@@ -301,7 +301,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "y[0]";
+	CHANNEL = "actual_state[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 7;
@@ -311,7 +311,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "stateOut";
+	CHANNEL = "next_state";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 8;
@@ -321,7 +321,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "stateOut[1]";
+	CHANNEL = "next_state[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 9;
@@ -331,7 +331,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "stateOut[0]";
+	CHANNEL = "next_state[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 10;

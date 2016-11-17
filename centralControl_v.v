@@ -8,8 +8,8 @@ module centralControl_v(input reset, clk, input [1:0] op, output [1:0] y);
 	
 	always@(posedge clk, posedge reset)
 	begin
-		if (reset) state <= S0;
-		else state <= nextstate;
+		if (reset) state = S0;
+		else state = nextstate;
 	end
 	
 	always @(*)
@@ -27,7 +27,6 @@ module centralControl_v(input reset, clk, input [1:0] op, output [1:0] y);
 		endcase
 	end
 	
-	assign y[1] = ~(state[1] + state[0]);
+	assign y[1] = ~state[1] & ~state[0];//~(state[1] | state[0]);
 	assign y[0] = state[0];
-
 endmodule
