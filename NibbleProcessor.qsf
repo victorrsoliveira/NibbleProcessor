@@ -53,6 +53,12 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name SEARCH_PATH /home/victor/Documents/QuartusProjects/NibbleProcessor/bsf_files
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name TEXT_FILE simulation/modelsim/testbench_file.txt
+set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/mainProcessor.vt
 set_global_assignment -name VECTOR_WAVEFORM_FILE vwf_files/Reg8Test.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE vwf_files/Reg5Test.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE vwf_files/Reg3Test.vwf
@@ -78,7 +84,3 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE vwf_files/complement2_v.vwf
 set_global_assignment -name VERILOG_FILE centralControl_v.v
 set_global_assignment -name VERILOG_FILE mainProcessor.v
 set_global_assignment -name VERILOG_FILE mux2_1.v
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
