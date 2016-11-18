@@ -13,28 +13,28 @@ module mainProcessor(input clk, reset, output [7:0] r, x,y, output [4:0] addr, o
 
 	assign pc_inc = pc_out + 5'd1;
 
-	programCounter(pc_inc, clk, reset, en[1],  pc_out);
-	single_port_rom(pc_out, clk, rom_out);
-	instructionReg(rom_out, clk, reset, en[1], inst_out);
+	programCounter PC (pc_inc, clk, reset, en[1],  pc_out);
+	single_port_rom ROM(pc_out, clk, rom_out);
+	instructionReg INST(rom_out, clk, reset, en[1], inst_out);
 
 	assign d_addr = inst_out[20:16];
 	assign d_y = inst_out[7:0];
 	assign d_op = inst_out[23:21];
 	assign d_x = inst_out[15:8];
 
-	addrReg(d_addr, clk, reset, en[1], addr_out);
-	yReg(d_y, clk, reset, en[1], y_out);
-	opReg(d_op, clk, reset, en[1], op_out);
-	xReg(d_x, clk, reset, en[1], x_out);
+	addrReg ADDR(d_addr, clk, reset, en[1], addr_out);
+	yReg Y(d_y, clk, reset, en[1], y_out);
+	opReg OP(d_op, clk, reset, en[1], op_out);
+	xReg X(d_x, clk, reset, en[1], x_out);
 
-	centralControl_v(reset,clk,{op_out[2],op_out[0]},en);
+	centralControl_v CONTROL(reset,clk,{op_out[2],op_out[0]},en);
 
 	mux2_1 mux_mem(op_out[0], y_out,ram_out,mux_mem_out);
 	mux2_1 mux_op(op_out[1],x_out,1+~x_out,mux_op_out);
 
 	assign result = mux_mem_out + mux_op_out;
 
-	rReg(result, clk, reset, en[0],r_out);
+	rReg R(result, clk, reset, en[0],r_out);
 
 	assign r = r_out; 
 	assign x = x_out;
@@ -42,6 +42,6 @@ module mainProcessor(input clk, reset, output [7:0] r, x,y, output [4:0] addr, o
 	assign addr = addr_out;
 	assign op = op_out;
 
-	single_port_ram(r_out,addr_out,en[1],clk,ram_out);
+	single_port_ram RAM(r_out,addr_out,en[1],clk,ram_out);
 
 endmodule

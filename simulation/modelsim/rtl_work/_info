@@ -1,0 +1,292 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/alexbatista/AlteraProjects/NibbleProcessor/simulation/modelsim
+vaddrReg
+Z1 !s110 1479437889
+!i10b 1
+!s100 zW?dzP;]L3zAF;=43?H6]1
+I25P]P8^I?R97nWIZc^?Lf0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1479333220
+8/home/alexbatista/AlteraProjects/NibbleProcessor/addrReg.v
+F/home/alexbatista/AlteraProjects/NibbleProcessor/addrReg.v
+L0 1
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1479437889.000000
+!s107 /home/alexbatista/AlteraProjects/NibbleProcessor/addrReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alexbatista/AlteraProjects/NibbleProcessor|/home/alexbatista/AlteraProjects/NibbleProcessor/addrReg.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+/home/alexbatista/AlteraProjects/NibbleProcessor
+naddr@reg
+vcentralControl_v
+Z7 !s110 1479437890
+!i10b 1
+!s100 Cdni@`QRARYEIbJCVbWM]2
+IzbO>LR>`dR5<?_bT=>0;R3
+R2
+R0
+w1479350464
+8/home/alexbatista/AlteraProjects/NibbleProcessor/centralControl_v.v
+F/home/alexbatista/AlteraProjects/NibbleProcessor/centralControl_v.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z8 !s108 1479437890.000000
+!s107 /home/alexbatista/AlteraProjects/NibbleProcessor/centralControl_v.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alexbatista/AlteraProjects/NibbleProcessor|/home/alexbatista/AlteraProjects/NibbleProcessor/centralControl_v.v|
+!i113 1
+R5
+R6
+ncentral@control_v
+vinstructionReg
+R1
+!i10b 1
+!s100 k0e]GFbHhM:YLo^bZ4@;o2
+I7Jm`=C3;L6=CKh`C>ADHa1
+R2
+R0
+w1479333177
+8/home/alexbatista/AlteraProjects/NibbleProcessor/instructionReg.v
+F/home/alexbatista/AlteraProjects/NibbleProcessor/instructionReg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/alexbatista/AlteraProjects/NibbleProcessor/instructionReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alexbatista/AlteraProjects/NibbleProcessor|/home/alexbatista/AlteraProjects/NibbleProcessor/instructionReg.v|
+!i113 1
+R5
+R6
+ninstruction@reg
+vmainProcessor
+R7
+!i10b 1
+!s100 X1g`ldkaW=NOmV[3D1NCX3
+IcRYg`GJVKY=S0fS2SUc;`3
+R2
+R0
+w1479414751
+8/home/alexbatista/AlteraProjects/NibbleProcessor/mainProcessor.v
+F/home/alexbatista/AlteraProjects/NibbleProcessor/mainProcessor.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 /home/alexbatista/AlteraProjects/NibbleProcessor/mainProcessor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alexbatista/AlteraProjects/NibbleProcessor|/home/alexbatista/AlteraProjects/NibbleProcessor/mainProcessor.v|
+!i113 1
+R5
+R6
+nmain@processor
+vmainProcessor_vlg_tst
+!s110 1479437898
+!i10b 1
+!s100 D=M@K6Eh0F>7<>N2Q_YMT3
+IkgcAE>TMWjO^V7;H_7`lJ2
+R2
+R0
+w1479437835
+8/home/alexbatista/AlteraProjects/NibbleProcessor/simulation/modelsim/mainProcessor.vt
+F/home/alexbatista/AlteraProjects/NibbleProcessor/simulation/modelsim/mainProcessor.vt
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1479437898.000000
+!s107 /home/alexbatista/AlteraProjects/NibbleProcessor/simulation/modelsim/mainProcessor.vt|
+!s90 -reportprogress|300|-work|work|/home/alexbatista/AlteraProjects/NibbleProcessor/simulation/modelsim/mainProcessor.vt|
+!i113 1
+o-work work
+nmain@processor_vlg_tst
+vmux2_1
+R7
+!i10b 1
+!s100 :eBH^e7;oWUJT548dciB12
+IK=<JZgAQeUU3YKj1@nTco0
+R2
+R0
+w1479331241
+8/home/alexbatista/AlteraProjects/NibbleProcessor/mux2_1.v
+F/home/alexbatista/AlteraProjects/NibbleProcessor/mux2_1.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 /home/alexbatista/AlteraProjects/NibbleProcessor/mux2_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alexbatista/AlteraProjects/NibbleProcessor|/home/alexbatista/AlteraProjects/NibbleProcessor/mux2_1.v|
+!i113 1
+R5
+R6
+vopReg
+R1
+!i10b 1
+!s100 Dd[WVK2M0NQ8L85XnUXnZ1
+In8o00Dgd1U?e9Cdo5J>]71
+R2
+R0
+w1479333262
+8/home/alexbatista/AlteraProjects/NibbleProcessor/opReg.v
+F/home/alexbatista/AlteraProjects/NibbleProcessor/opReg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/alexbatista/AlteraProjects/NibbleProcessor/opReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alexbatista/AlteraProjects/NibbleProcessor|/home/alexbatista/AlteraProjects/NibbleProcessor/opReg.v|
+!i113 1
+R5
+R6
+nop@reg
+vprogramCounter
+R1
+!i10b 1
+!s100 BU0QWRh:=^C]@^98Z2f@?0
+ID;aNUDSazZ>gS67[]m9>k2
+R2
+R0
+w1479333120
+8/home/alexbatista/AlteraProjects/NibbleProcessor/programCounter.v
+F/home/alexbatista/AlteraProjects/NibbleProcessor/programCounter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/alexbatista/AlteraProjects/NibbleProcessor/programCounter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alexbatista/AlteraProjects/NibbleProcessor|/home/alexbatista/AlteraProjects/NibbleProcessor/programCounter.v|
+!i113 1
+R5
+R6
+nprogram@counter
+vrReg
+R7
+!i10b 1
+!s100 chDCl`4N8?dCMaz0bZhRT1
+I924MaabVLa^>[AfK66nzk0
+R2
+R0
+w1479332950
+8/home/alexbatista/AlteraProjects/NibbleProcessor/rReg.v
+F/home/alexbatista/AlteraProjects/NibbleProcessor/rReg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 /home/alexbatista/AlteraProjects/NibbleProcessor/rReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alexbatista/AlteraProjects/NibbleProcessor|/home/alexbatista/AlteraProjects/NibbleProcessor/rReg.v|
+!i113 1
+R5
+R6
+nr@reg
+vsingle_port_ram
+R1
+!i10b 1
+!s100 `hJDgj4CZn0o[_MNKe1`R3
+IJZZ<49<dSkbj`:8ED=EYn2
+R2
+R0
+Z9 w1478555166
+8/home/alexbatista/AlteraProjects/NibbleProcessor/single_port_ram.v
+F/home/alexbatista/AlteraProjects/NibbleProcessor/single_port_ram.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/alexbatista/AlteraProjects/NibbleProcessor/single_port_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alexbatista/AlteraProjects/NibbleProcessor|/home/alexbatista/AlteraProjects/NibbleProcessor/single_port_ram.v|
+!i113 1
+R5
+R6
+vsingle_port_rom
+R7
+!i10b 1
+!s100 6AF0OD1MbelK3L>7nLb6C3
+IQl5h?G8U=D0j]F?M:eAcC0
+R2
+R0
+R9
+8/home/alexbatista/AlteraProjects/NibbleProcessor/single_port_rom.v
+F/home/alexbatista/AlteraProjects/NibbleProcessor/single_port_rom.v
+L0 4
+R3
+r1
+!s85 0
+31
+R8
+!s107 /home/alexbatista/AlteraProjects/NibbleProcessor/single_port_rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alexbatista/AlteraProjects/NibbleProcessor|/home/alexbatista/AlteraProjects/NibbleProcessor/single_port_rom.v|
+!i113 1
+R5
+R6
+vxReg
+R7
+!i10b 1
+!s100 HXYFa:@fS:7[Xa^Piko^Q3
+I2eJPzWh>7fco?K]eeinaj2
+R2
+R0
+w1479333297
+8/home/alexbatista/AlteraProjects/NibbleProcessor/xReg.v
+F/home/alexbatista/AlteraProjects/NibbleProcessor/xReg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/alexbatista/AlteraProjects/NibbleProcessor/xReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alexbatista/AlteraProjects/NibbleProcessor|/home/alexbatista/AlteraProjects/NibbleProcessor/xReg.v|
+!i113 1
+R5
+R6
+nx@reg
+vyReg
+R1
+!i10b 1
+!s100 W`ogT]QkedD6oK1Ce]nEP3
+IJfY1R:;aCEg<[F8ECnIKN0
+R2
+R0
+w1479333074
+8/home/alexbatista/AlteraProjects/NibbleProcessor/yReg.v
+F/home/alexbatista/AlteraProjects/NibbleProcessor/yReg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/alexbatista/AlteraProjects/NibbleProcessor/yReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/alexbatista/AlteraProjects/NibbleProcessor|/home/alexbatista/AlteraProjects/NibbleProcessor/yReg.v|
+!i113 1
+R5
+R6
+ny@reg
